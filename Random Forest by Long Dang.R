@@ -1,3 +1,11 @@
+#install necessary packages
+install.packages("caret")
+install.packages("randomForest")
+install.packages("pROC")
+install.packages("tidyverse")
+install.packages("e1071")
+
+
 # Load necessary libraries
 library(tidyverse)       # For data manipulation and visualization
 library(caret)           # For model training and evaluation
@@ -6,8 +14,8 @@ library(pROC)            # For ROC curves and AUC calculation
 library(e1071)           # For model tuning
 
 # Set file path for dataset
-file_path <- "C:/Users/lilbu/Documents/MGIS-Final-Project-Wine-Quality-Prediction/WineQT.csv"
-
+#file_path <- "C:/Users/lilbu/Documents/MGIS-Final-Project-Wine-Quality-Prediction/WineQT.csv"
+file_path <- 'WineQT.csv'
 # Load the dataset
 wine_data <- read.csv(file_path)
 
