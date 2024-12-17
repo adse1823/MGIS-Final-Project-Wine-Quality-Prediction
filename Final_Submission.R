@@ -13,7 +13,7 @@ install.packages("corrplot")
 install.packages("gridExtra")
 install.packages("ggplot2")
 # After installation, load the libraries
-library(Rtools)
+#library(Rtools)
 library(tidyverse)
 library(caret)
 library(randomForest)
@@ -263,12 +263,19 @@ prediction_analysis <- data.frame(
                         combined_predictions$Actual_Quality, mean)
 )
 
+
+
 # Add Count column
 prediction_analysis$Count <- table(combined_predictions$Actual_Quality)
 
 # Export the analysis
 write.csv(prediction_analysis, "prediction_analysis.csv", row.names = FALSE)
 
+
+
+# ====================================
+# Predict future wine quality
+# ====================================
 
 # Read the new data (without the 'quality' column)
 new_data <- read.csv("predicted_new_data.csv")
