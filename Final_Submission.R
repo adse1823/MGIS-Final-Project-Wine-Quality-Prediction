@@ -2,7 +2,6 @@
 # Predict 190 New Rows Based on Existing Features
 # ====================================
 # Install all required packages
-install.packages("Rtools")
 install.packages("tidyverse")
 install.packages("caret")
 install.packages("randomForest")
